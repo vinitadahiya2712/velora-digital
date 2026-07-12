@@ -1,63 +1,47 @@
-"use client";
-
-import { motion } from "framer-motion";
 import Button from "@/components/ui/Button";
 import HeroBadge from "./HeroBadge";
 import HeroStats from "./HeroStats";
 
 export default function HeroContent() {
 return (
-    <motion.div
-    className="relative z-10"
-    initial={{ opacity: 0, y: 40 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{
-        duration: 0.8,
-        ease: "easeOut",
-    }}
-    >
+    <div className="max-w-3xl">
+
     <HeroBadge />
 
-    <h1 className="mt-8 text-5xl md:text-6xl xl:text-7xl font-extrabold leading-tight">
-        We Build{" "}
-        <span className="bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-400 bg-clip-text text-transparent">
-        Digital Experiences
+    <h1 className="mt-8 text-5xl font-extrabold leading-tight text-white md:text-6xl xl:text-7xl">
+
+        Building
+
+        <span className="block bg-gradient-to-r from-pink-500 via-violet-500 to-cyan-400 bg-clip-text text-transparent">
+        Intelligent
         </span>
-        <br />
-        That Grow Businesses.
+
+        Digital Experiences.
+
     </h1>
 
-    <p className="mt-8 max-w-xl text-lg leading-8 text-zinc-400">
-        Velora Digital helps startups, creators, and businesses build
-        high-performing websites, premium branding, AI-powered solutions,
-        cloud infrastructure, and modern digital experiences.
+    <p className="mt-8 max-w-2xl text-lg leading-8 text-zinc-400">
+
+        We help ambitious businesses grow through premium websites,
+        AI automation, branding, cloud solutions and powerful digital
+        experiences that leave a lasting impression.
+
     </p>
 
-    <div className="mt-10 flex flex-wrap gap-4">
-        <Button>Start Your Project</Button>
+    <div className="mt-10 flex flex-wrap gap-5">
 
-        <Button variant="secondary">View Our Work</Button>
-    </div>
+        <Button>
+        🚀 Start Project
+        </Button>
 
-    <div className="mt-10 flex flex-wrap gap-3">
-        <span className="rounded-full border border-zinc-700 px-4 py-2 text-sm">
-        ⚡ Fast Delivery
-        </span>
+        <Button variant="outline">
+        View Portfolio
+        </Button>
 
-        <span className="rounded-full border border-zinc-700 px-4 py-2 text-sm">
-        🤖 AI Powered
-        </span>
-
-        <span className="rounded-full border border-zinc-700 px-4 py-2 text-sm">
-        ☁ Cloud Ready
-        </span>
-
-        <span className="rounded-full border border-zinc-700 px-4 py-2 text-sm">
-        🎨 Premium UI
-        </span>
     </div>
 
     <HeroStats />
-    </motion.div>
+
+    </div>
 );
 }

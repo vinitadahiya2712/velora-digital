@@ -1,75 +1,80 @@
 export default function HeroDashboard() {
 return (
-    <div className="relative flex justify-center items-center">
+    <div className="relative hidden lg:flex items-center justify-center">
 
-      {/* Glow */}
-    <div className="absolute w-96 h-96 rounded-full bg-pink-500/20 blur-[120px]" />
+    <div className="w-full max-w-lg rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl">
 
-      {/* Main Dashboard */}
-    <div className="relative w-full max-w-lg rounded-[32px] border border-white/10 bg-white/5 backdrop-blur-2xl p-8 shadow-[0_0_60px_rgba(255,45,149,0.15)]">
+        <div className="flex items-center justify-between">
 
-        {/* Header */}
-        <div className="flex items-center justify-between mb-8">
         <div>
-            <p className="text-zinc-400 text-sm">
-            Velora Digital
+            <p className="text-sm text-zinc-400">
+            Active Projects
             </p>
 
-            <h3 className="text-2xl font-bold">
-            Business Dashboard
-            </h3>
-        </div>
-
-        <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-pink-500 to-purple-600 flex items-center justify-center text-2xl">
-            🚀
-        </div>
-        </div>
-
-        {/* Cards */}
-        <div className="grid grid-cols-2 gap-5">
-
-        <div className="rounded-2xl bg-black/30 border border-white/10 p-5">
-            <p className="text-zinc-400 text-sm">Website Score</p>
-            <h2 className="mt-2 text-3xl font-bold">98%</h2>
-        </div>
-
-        <div className="rounded-2xl bg-black/30 border border-white/10 p-5">
-            <p className="text-zinc-400 text-sm">SEO Ready</p>
-            <h2 className="mt-2 text-3xl font-bold text-green-400">
-            100%
+            <h2 className="mt-2 text-4xl font-bold text-white">
+            24
             </h2>
         </div>
 
-        <div className="rounded-2xl bg-black/30 border border-white/10 p-5">
-            <p className="text-zinc-400 text-sm">AI Powered</p>
-            <h2 className="mt-2 text-xl font-semibold">
-            Enabled
-            </h2>
-        </div>
-
-        <div className="rounded-2xl bg-black/30 border border-white/10 p-5">
-            <p className="text-zinc-400 text-sm">Cloud</p>
-            <h2 className="mt-2 text-xl font-semibold">
-            Ready
-            </h2>
+        <div className="rounded-xl bg-green-500/20 px-3 py-2 text-green-400">
+            +18%
         </div>
 
         </div>
 
-        {/* Progress */}
-        <div className="mt-10">
+        <div className="mt-10 space-y-6">
 
-        <div className="flex justify-between mb-2">
+        <div className="rounded-2xl bg-zinc-900/70 p-5">
+            <div className="flex justify-between">
+
             <span className="text-zinc-400">
-            Project Progress
+                AI Automation
             </span>
 
-            <span>75%</span>
+            <span className="text-pink-400">
+                92%
+            </span>
+
+            </div>
+
+            <div className="mt-3 h-2 rounded-full bg-zinc-700">
+
+            <div className="h-2 w-[92%] rounded-full bg-gradient-to-r from-pink-500 to-violet-500" />
+
+            </div>
         </div>
 
-        <div className="h-3 rounded-full bg-zinc-800 overflow-hidden">
+        <div className="rounded-2xl bg-zinc-900/70 p-5">
+            <div className="flex justify-between">
 
-            <div className="h-full w-3/4 rounded-full bg-gradient-to-r from-pink-500 to-purple-500" />
+            <span className="text-zinc-400">
+                Cloud Infrastructure
+            </span>
+
+            <span className="text-cyan-400">
+                AWS
+            </span>
+
+            </div>
+
+            <p className="mt-3 text-sm text-zinc-500">
+            Secure • Scalable • High Performance
+            </p>
+
+        </div>
+
+        <div className="rounded-2xl bg-zinc-900/70 p-5">
+            <div className="flex justify-between">
+
+            <span className="text-zinc-400">
+                Performance Score
+            </span>
+
+            <span className="text-green-400">
+                98/100
+            </span>
+
+            </div>
 
         </div>
 

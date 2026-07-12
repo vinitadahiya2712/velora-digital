@@ -1,16 +1,13 @@
 import Navbar from "@/components/navigation/Navbar";
+import { Hero } from "@/sections/hero";
 
-export default function HomePage() {
+export default function Home() {
   return (
     <>
       <Navbar />
 
-      <main className="pt-40">
-        <section className="flex h-screen items-center justify-center">
-          <h1 className="text-6xl font-bold text-white">
-            Velora Digital
-          </h1>
-        </section>
+      <main>
+        <Hero />
       </main>
     </>
   );
