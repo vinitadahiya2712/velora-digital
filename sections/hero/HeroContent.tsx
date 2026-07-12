@@ -1,11 +1,21 @@
+"use client";
+
+import { motion } from "framer-motion";
 import Button from "@/components/ui/Button";
 import HeroBadge from "./HeroBadge";
 import HeroStats from "./HeroStats";
 
 export default function HeroContent() {
 return (
-    <div className="relative z-10">
-
+    <motion.div
+    className="relative z-10"
+    initial={{ opacity: 0, y: 40 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{
+        duration: 0.8,
+        ease: "easeOut",
+    }}
+    >
     <HeroBadge />
 
     <h1 className="mt-8 text-5xl md:text-6xl xl:text-7xl font-extrabold leading-tight">
@@ -24,13 +34,9 @@ return (
     </p>
 
     <div className="mt-10 flex flex-wrap gap-4">
-        <Button>
-        Start Your Project
-        </Button>
+        <Button>Start Your Project</Button>
 
-        <Button variant="secondary">
-        View Our Work
-        </Button>
+        <Button variant="secondary">View Our Work</Button>
     </div>
 
     <div className="mt-10 flex flex-wrap gap-3">
@@ -52,7 +58,6 @@ return (
     </div>
 
     <HeroStats />
-
-    </div>
+    </motion.div>
 );
 }

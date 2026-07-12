@@ -1,26 +1,45 @@
 "use client";
 
-import Button from "../ui/Button";
-import Container from "../ui/Container";
+import Container from "@/components/ui/Container";
+import Button from "@/components/ui/Button";
+
+import Logo from "./Logo";
+import NavLinks from "./NavLinks";
+import ThemeToggle from "./ThemeToggle";
+import MobileMenu from "./MobileMenu";
 
 export default function Navbar() {
 return (
-    <header className="fixed top-0 left-0 w-full z-50 backdrop-blur-xl bg-black/40 border-b border-zinc-800">
+    <header className="fixed left-0 top-0 z-50 w-full">
     <Container>
-        <div className="flex items-center justify-between h-20">
-        <h1 className="text-2xl font-bold">
-            Velora <span className="text-pink-500">Digital</span>
-        </h1>
+        <div
+        className="
+        mt-5
+        flex
+        h-20
+        items-center
+        justify-between
+        rounded-2xl
+        border
+        border-white/10
+        bg-black/40
+        px-6
+        backdrop-blur-xl
+        "
+        >
+        <Logo />
 
-        <nav className="hidden md:flex gap-8 text-zinc-300">
-            <a href="#">Home</a>
-            <a href="#">Services</a>
-            <a href="#">Portfolio</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
-        </nav>
+        <NavLinks />
 
-        <Button>Let's Talk</Button>
+        <div className="flex items-center gap-3">
+            <ThemeToggle />
+
+            <div className="hidden lg:block">
+            <Button>Start Project</Button>
+            </div>
+
+            <MobileMenu />
+        </div>
         </div>
     </Container>
     </header>
