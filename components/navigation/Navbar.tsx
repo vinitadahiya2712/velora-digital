@@ -10,7 +10,7 @@ import MobileMenu from "./MobileMenu";
 
 export default function Navbar() {
 return (
-    <header className="fixed left-0 top-0 z-50 w-full">
+    <header className="fixed top-0 left-0 z-50 w-full transition-all duration-500">
     <Container>
         <div
         className="

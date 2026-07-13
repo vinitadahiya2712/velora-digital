@@ -12,8 +12,8 @@ return (
 
         Building
 
-        <span className="block bg-gradient-to-r from-pink-500 via-violet-500 to-cyan-400 bg-clip-text text-transparent">
-        Intelligent
+        <span className="block gradient-text">
+            Intelligent
         </span>
 
         Digital Experiences.

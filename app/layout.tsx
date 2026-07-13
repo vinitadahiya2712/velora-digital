@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
+import Loader from "@/components/loader/Loader";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -45,8 +45,10 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} scroll-smooth`}
     >
-      <body className="bg-[#050505] text-white antialiased overflow-x-hidden">
-        {children}
+      <body className="min-h-full flex flex-col">
+        <Loader>
+          {children}
+        </Loader>
       </body>
     </html>
   );
