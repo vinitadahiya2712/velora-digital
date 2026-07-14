@@ -1,47 +1,40 @@
-import Button from "@/components/ui/Button";
+"use client";
+
+import { motion } from "framer-motion";
+
 import HeroBadge from "./HeroBadge";
+import HeroButtons from "./HeroButtons";
 import HeroStats from "./HeroStats";
 
 export default function HeroContent() {
-return (
-    <div className="max-w-3xl">
+    return (
+    <motion.div
+        initial={{ opacity: 0, x: -40 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8 }}
+        className="max-w-3xl"
+    >
+        <HeroBadge />
 
-    <HeroBadge />
-
-    <h1 className="mt-8 text-5xl font-extrabold leading-tight text-white md:text-6xl xl:text-7xl">
-
+        <h1 className="mt-8 text-5xl font-extrabold leading-[1.05] text-white md:text-6xl xl:text-7xl">
         Building
 
-        <span className="block gradient-text">
+        <span className="block bg-gradient-to-r from-pink-500 via-violet-400 to-cyan-400 bg-clip-text text-transparent">
             Intelligent
         </span>
 
-        Digital Experiences.
+        Digital Experiences
+        </h1>
 
-    </h1>
+        <p className="mt-8 max-w-2xl text-lg leading-8 text-zinc-400">
+        We build premium websites, AI automation, cloud infrastructure,
+        branding and digital products that help ambitious businesses
+        stand out and grow faster.
+        </p>
 
-    <p className="mt-8 max-w-2xl text-lg leading-8 text-zinc-400">
-
-        We help ambitious businesses grow through premium websites,
-        AI automation, branding, cloud solutions and powerful digital
-        experiences that leave a lasting impression.
-
-    </p>
-
-    <div className="mt-10 flex flex-wrap gap-5">
-
-        <Button>
-        🚀 Start Project
-        </Button>
-
-        <Button variant="outline">
-        View Portfolio
-        </Button>
-
-    </div>
+    <HeroButtons />
 
     <HeroStats />
-
-    </div>
-);
+    </motion.div>
+    );
 }

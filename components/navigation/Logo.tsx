@@ -3,23 +3,34 @@ import Link from "next/link";
 
 export default function Logo() {
 return (
-    <Link href="/" className="flex items-center gap-3">
-    <Image
-        src="/logo/velora-logo.png"
-        alt="Velora Digital"
-        width={48}
-        height={48}
-        priority
-    />
+    <Link
+    href="/"
+    className="group flex items-center gap-3 transition-all duration-300"
+    >
+    <div className="relative flex h-12 w-12 items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl">
 
-    <div>
-        <h2 className="text-lg font-bold tracking-wide text-white">
+        <Image
+            src={`/logo/velora-logo.png?v=${Date.now()}`}
+            alt="Velora Digital"
+            width={40}
+            height={40}
+            priority
+            unoptimized
+            className="object-contain transition-transform duration-500 group-hover:scale-110"
+        />
+        
+    </div>
+
+    <div className="leading-none">
+
+        <h2 className="text-xl font-bold tracking-tight text-white">
         Velora
         </h2>
 
-        <p className="text-xs tracking-[0.35em] uppercase text-zinc-400">
-        Digital
+        <p className="mt-1 text-[11px] uppercase tracking-[0.45em] text-zinc-400">
+        DIGITAL
         </p>
+
     </div>
     </Link>
 );

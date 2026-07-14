@@ -10,21 +10,22 @@ import MobileMenu from "./MobileMenu";
 
 export default function Navbar() {
 return (
-    <header className="fixed top-0 left-0 z-50 w-full transition-all duration-500">
+    <header className="fixed inset-x-0 top-0 z-50">
     <Container>
         <div
         className="
-        mt-5
+        mt-4
         flex
-        h-20
+        h-16 lg:h-[72px]
         items-center
         justify-between
         rounded-2xl
-        border
-        border-white/10
+        border border-white/10
         bg-black/40
         px-6
-        backdrop-blur-xl
+        shadow-2xl shadow-black/30
+        backdrop-blur-2xl
+        transition-all duration-300
         "
         >
         <Logo />
@@ -35,7 +36,9 @@ return (
             <ThemeToggle />
 
             <div className="hidden lg:block">
-            <Button>Start Project</Button>
+            <Button>
+                Start Project
+            </Button>
             </div>
 
             <MobileMenu />
