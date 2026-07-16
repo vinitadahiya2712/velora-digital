@@ -45,10 +45,10 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} scroll-smooth`}
     >
-      <body className="min-h-full flex flex-col">
-        <Loader>
+      <body className="bg-[#050505] text-white overflow-x-hidden">
+        <body>
           {children}
-        </Loader>
+        </body>
       </body>
     </html>
   );
