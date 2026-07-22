@@ -16,7 +16,7 @@ export default function HeroContent() {
         duration: 0.8,
         ease: "easeOut",
         }}
-        className="max-w-2xl"
+        className="max-w-2xl pt-10"
     >
         <HeroBadge />
 

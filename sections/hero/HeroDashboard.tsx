@@ -1,87 +1,76 @@
+"use client";
+
+import { motion } from "framer-motion";
+import GlassCard from "@/components/ui/GlassCard";
+
 export default function HeroDashboard() {
-return (
-    <div className="relative hidden lg:flex items-center justify-center">
-
-    <div className="w-full max-w-lg rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl">
-
-        <div className="flex items-center justify-between">
-
-        <div>
-            <p className="text-sm text-zinc-400">
-            Active Projects
-            </p>
-
-            <h2 className="mt-2 text-4xl font-bold text-white">
-            24
-            </h2>
-        </div>
-
-        <div className="rounded-xl bg-green-500/20 px-3 py-2 text-green-400">
-            +18%
-        </div>
-
-        </div>
-
-        <div className="mt-10 space-y-6">
-
-        <div className="rounded-2xl bg-zinc-900/70 p-5">
-            <div className="flex justify-between">
-
-            <span className="text-zinc-400">
-                AI Automation
-            </span>
-
-            <span className="text-pink-400">
-                92%
-            </span>
-
+    return (
+    <motion.div
+        initial={{ opacity: 0, x: 40 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        className="hidden lg:flex justify-center pt-12"
+    >
+        <GlassCard className="w-full max-w-md p-6">
+        {/* Header */}
+            <div className="flex items-center justify-between">
+            <div>
+            <p className="text-sm text-zinc-400">Velora Control Panel</p>
+            <h3 className="mt-1 text-2xl font-bold text-white">
+                Live Overview
+            </h3>
             </div>
 
-            <div className="mt-3 h-2 rounded-full bg-zinc-700">
-
-            <div className="h-2 w-[92%] rounded-full bg-gradient-to-r from-pink-500 to-violet-500" />
-
+            <div className="flex items-center gap-2 rounded-full bg-emerald-500/10 px-3 py-1">
+            <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
+            <span className="text-sm text-emerald-400">Online</span>
             </div>
         </div>
 
-        <div className="rounded-2xl bg-zinc-900/70 p-5">
-            <div className="flex justify-between">
-
-            <span className="text-zinc-400">
-                Cloud Infrastructure
-            </span>
-
-            <span className="text-cyan-400">
-                AWS
-            </span>
-
+        {/* Stats */}
+        <div className="mt-8 grid grid-cols-2 gap-4">
+            <div className="rounded-2xl bg-white/5 p-4">
+            <p className="text-zinc-400 text-sm">AI Score</p>
+            <h4 className="mt-2 text-3xl font-bold text-pink-400">98%</h4>
             </div>
 
-            <p className="mt-3 text-sm text-zinc-500">
-            Secure • Scalable • High Performance
-            </p>
-
-        </div>
-
-        <div className="rounded-2xl bg-zinc-900/70 p-5">
-            <div className="flex justify-between">
-
-            <span className="text-zinc-400">
-                Performance Score
-            </span>
-
-            <span className="text-green-400">
-                98/100
-            </span>
-
+            <div className="rounded-2xl bg-white/5 p-4">
+            <p className="text-zinc-400 text-sm">Projects</p>
+            <h4 className="mt-2 text-3xl font-bold text-cyan-400">24</h4>
             </div>
 
+            <div className="rounded-2xl bg-white/5 p-4">
+            <p className="text-zinc-400 text-sm">AWS Status</p>
+            <h4 className="mt-2 text-lg font-semibold text-emerald-400">
+                Active
+            </h4>
+            </div>
+
+            <div className="rounded-2xl bg-white/5 p-4">
+            <p className="text-zinc-400 text-sm">Growth</p>
+            <h4 className="mt-2 text-2xl font-bold text-violet-400">
+                +18%
+            </h4>
+            </div>
         </div>
 
+        {/* Performance */}
+        <div className="mt-8">
+            <div className="flex items-center justify-between">
+            <span className="text-zinc-400">Performance</span>
+            <span className="text-white font-semibold">96/100</span>
+            </div>
+
+            <div className="mt-3 h-2 rounded-full bg-zinc-800">
+            <motion.div
+                initial={{ width: 0 }}
+                animate={{ width: "96%" }}
+                transition={{ duration: 1.2 }}
+                className="h-2 rounded-full bg-gradient-to-r from-pink-500 via-violet-500 to-cyan-400"
+            />
+            </div>
         </div>
-
-    </div>
-
-    </div>
-);
+        </GlassCard>
+    </motion.div>
+    );
 }

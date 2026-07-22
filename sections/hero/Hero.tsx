@@ -33,7 +33,7 @@ export default function Hero() {
         />
 
         <Container>
-        <div className="grid min-h-[85vh] items-center gap-16 lg:grid-cols-[1.15fr_.85fr]">
+        <div className="grid min-h-screen items-center gap-20 pt-10 lg:grid-cols-[1.1fr_.9fr]">
             <HeroContent />
 
             <HeroDashboard />

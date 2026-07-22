@@ -1,37 +1,48 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 import Container from "@/components/ui/Container";
+
+import SectionHeading from "./SectionHeading";
 import ServiceCard from "./ServiceCard";
 import { services } from "./servicesData";
 
-export default function Services() {
-return (
-    <section id="services" className="py-28">
-    <Container>
-        <div className="mx-auto max-w-3xl text-center">
-        <span className="rounded-full border border-pink-500/20 bg-pink-500/10 px-4 py-2 text-sm text-pink-300">
-            Our Services
-        </span>
+export function Services() {
+    return (
+    <section
+        id="services"
+        className="relative py-28 lg:py-36"
+    >
+        <Container>
+        <SectionHeading
+            badge="Our Services"
+            title="Everything You Need To Build & Grow"
+            subtitle="From premium websites to AI automation and cloud infrastructure, we help businesses launch, scale and stand out in the digital world."
+        />
 
-        <h2 className="mt-6 text-5xl font-bold text-white">
-            Digital Solutions Built for Growth
-        </h2>
-
-        <p className="mt-6 text-lg leading-8 text-zinc-400">
-            From modern websites to AI automation and cloud infrastructure,
-            we build digital experiences that help businesses scale with confidence.
-        </p>
+        <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+            {services.map((service, index) => (
+            <motion.div
+                key={service.id}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                duration: 0.6,
+                delay: index * 0.1,
+                }}
+                viewport={{ once: true }}
+            >
+                <ServiceCard
+                title={service.title}
+                description={service.description}
+                icon={service.icon}
+                color={service.color}
+                />
+            </motion.div>
+            ))}
         </div>
-
-        <div className="mt-20 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-        {services.map((service) => (
-            <ServiceCard
-            key={service.title}
-            title={service.title}
-            description={service.description}
-            icon={service.icon}
-            />
-        ))}
-        </div>
-    </Container>
+        </Container>
     </section>
-);
+    );
 }
